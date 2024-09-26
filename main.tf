@@ -26,6 +26,6 @@ resource "aws_lambda_function" "lambda_function" {
   role          = aws_iam_role.lambda_role.arn
   handler       = "index.handler"
   runtime       = "nodejs14.x"
-  source_code_hash = filebase64sha256("src/lambda.zip")
+  source_code_hash = filebase64sha256("src/lambda_function.js")
   timeout       = 10
 }

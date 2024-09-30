@@ -28,4 +28,10 @@ resource "aws_lambda_function" "lambda_function" {
   runtime       = "nodejs14.x"
   source_code_hash = filebase64sha256("src/lambda_function.js")
   timeout       = 10
+
+  environment {
+    variables = {
+      API_GATEWAY_APPLICATION_PROXY = aws_cognito_user_pool.user_pool.id
+    }
+  }
 }

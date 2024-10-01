@@ -42,7 +42,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      run: terraform plan
+      run: terraform plan -var "accountIdVoclabs=${{ secrets.AWS_ACCOUNT_ID }}"
 
     - name: Terraform Apply
       run: terraform apply -var "accountIdVoclabs=${{ secrets.AWS_ACCOUNT_ID }}" -auto-approve

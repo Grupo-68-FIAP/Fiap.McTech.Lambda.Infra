@@ -45,7 +45,7 @@ jobs:
       run: terraform plan
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve
+      run: terraform apply -var "accountIdVoclabs=${{ secrets.AWS_ACCOUNT_ID }}" -auto-approve
 
     - name: Upload Lambda Deployment Package
       uses: actions/upload-artifact@v3

@@ -31,7 +31,7 @@ resource "aws_lambda_function" "lambda_function" {
 
   environment {
     variables = {
-      API_GATEWAY_APPLICATION_PROXY = aws_cognito_user_pool.user_pool.id
+      API_GATEWAY_APPLICATION_PROXY = ""
     }
   }
 }

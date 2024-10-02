@@ -1,14 +1,11 @@
 name: Deploy AWS Cognito and Lambda with Terraform
 
 on:
-  push:
-    branches:
-      #- main - Quando estiver OK, deixar apenas main 
-      - develop 
   pull_request:
     branches:
-      #- main - Quando estiver OK, deixar apenas main 
-      - develop
+      - main
+    types:
+      - closed
 
 jobs:
   terraform:

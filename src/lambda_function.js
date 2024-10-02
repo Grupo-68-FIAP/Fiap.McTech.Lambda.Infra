@@ -11,7 +11,7 @@ exports.handler = async (event) => {
     });
 
     const options = {
-        hostname: 'mctech.com.br',  // ALTERAR APÓS SUBIR APLICAÇÃO NA AWS
+        hostname: process.env.API_GATEWAY_APPLICATION_PROXY,
         path: '/cliente',          
         method: 'POST',             
         headers: {

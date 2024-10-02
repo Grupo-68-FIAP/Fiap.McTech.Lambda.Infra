@@ -45,7 +45,7 @@ jobs:
       run: terraform apply -var "accountIdVoclabs=${{ secrets.AWS_ACCOUNT_ID }}" -auto-approve
 
     - name: Upload Lambda Deployment Package
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: lambda_registry_client.zip
         path: lambda_registry_client.zip
